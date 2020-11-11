@@ -1,5 +1,5 @@
 module.exports = {
-  apiKey: "AIzaSyA580I2f31anO8h--DXPqkbyl0pd0Ufb_k",
+  apiKey: "xxxx",
   authDomain: "cereal-coffee.firebaseapp.com",
   databaseURL: "https://cereal-coffee.firebaseio.com",
   projectId: "cereal-coffee",

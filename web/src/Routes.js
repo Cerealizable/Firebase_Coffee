@@ -5,6 +5,7 @@ import { RouteWithLayout } from './common';
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
 import {
+  Account as AccountView,
   Ecommerce as EcommerceView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
@@ -14,6 +15,12 @@ const Routes = () => {
   return (
     <Switch>
       <Redirect exact from="/" to="/home" />
+      <RouteWithLayout
+        component={AccountView}
+        exact
+        layout={MainLayout}
+        path="/account:pageId?"
+      />
       <RouteWithLayout
         component={EcommerceView}
         exact
