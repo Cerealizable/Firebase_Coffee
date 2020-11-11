@@ -9,6 +9,7 @@ import {
   Ecommerce as EcommerceView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
+  Startup as StartupView,
 } from './views';
 
 const Routes = () => {
@@ -22,7 +23,7 @@ const Routes = () => {
         path="/account/:pageId?"
       />
       <RouteWithLayout
-        component={EcommerceView}
+        component={StartupView}
         exact
         layout={MainLayout}
         path="/home"
@@ -38,6 +39,12 @@ const Routes = () => {
         exact
         layout={MinimalLayout}
         path="/not-found-cover"
+      />
+      <RouteWithLayout
+        component={EcommerceView}
+        exact
+        layout={MainLayout}
+        path="/products"
       />
       <Redirect to="/not-found-cover" status="404" />
     </Switch>
