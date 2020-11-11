@@ -10,6 +10,7 @@ import {
   Ecommerce as EcommerceView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
+  SignupCover as SignupCoverView,
   Startup as StartupView,
 } from './views';
 
@@ -46,6 +47,12 @@ const Routes = () => {
         exact
         layout={MinimalLayout}
         path="/not-found-cover"
+      />
+      <RouteWithLayout
+        component={SignupCoverView}
+        exact
+        layout={MinimalLayout}
+        path="/signup"
       />
       <RouteWithLayout
         component={EcommerceView}
