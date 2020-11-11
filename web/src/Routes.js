@@ -19,7 +19,7 @@ const Routes = () => {
         component={AccountView}
         exact
         layout={MainLayout}
-        path="/account:pageId?"
+        path="/account/:pageId?"
       />
       <RouteWithLayout
         component={EcommerceView}
