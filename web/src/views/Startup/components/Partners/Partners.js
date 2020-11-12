@@ -48,7 +48,7 @@ const Partners = props => {
               align="center"
               className={classes.fontWeight700}
             >
-              Our work has been featured in:
+              Our coffee has been featured on:
             </Typography>
           </Grid>
           <Grid item xs={12}>

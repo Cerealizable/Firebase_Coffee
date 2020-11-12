@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button, colors } from '@material-ui/core';
+import { Grid, colors } from '@material-ui/core';
 import { SectionHeader, IconAlternate } from 'components/molecules';
 import { CardBase, DescriptionListIcon } from 'components/organisms';
 
@@ -18,12 +18,12 @@ const Process = props => {
     <div className={clsx(classes.root, className)} data-aos="fade-up" {...rest}>
       <SectionHeader
         title="Our process"
-        subtitle="We are a small agency of talented designers & developers. Unlike teams from big agencies, we will treat your project as ours. We will walk you through our smooth and simple process."
-        ctaGroup={[
-          <Button color="primary" variant="contained" size="large">
-            Contact us
-          </Button>,
-        ]}
+        subtitle="We are a small agency of talented scientist, developers, and explorers. Unlike teams from big corporations, we treat coffee with the care it deserves. Here is our smooth and simple process."
+        // ctaGroup={[
+        //   <Button color="primary" variant="contained" size="large">
+        //     Contact us
+        //   </Button>,
+        // ]}
         fadeUp
       />
       <Grid container spacing={4}>
@@ -53,11 +53,11 @@ const Process = props => {
             </CardBase>
           </Grid>
         ))}
-        <Grid item container xs={12} justify="center">
+        {/* <Grid item container xs={12} justify="center">
           <Button variant="contained" size="large" color="primary">
             Contact us
           </Button>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

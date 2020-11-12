@@ -27,19 +27,19 @@ const Hero = props => {
   return (
     <div className={clsx(classes.root, className)} data-aos="fade-up" {...rest}>
       <HeroBackground
-        backgroundImg="/images/illustrations/cities.jpg"
+        backgroundImg="/images/illustrations/coffee-hero-home-2.jpg"
         backgroundColor="white"
-        backgroundPosition="bottom center"
+        backgroundPosition="center"
         contentSectionClassName={classes.noPadding}
         className={classes.hero}
         disbaleCoverOpacity
       >
         <SectionHeader
-          title="We craft beautiful websites and digital products."
-          subtitle="We design, develop and launch websites and products for startups, companies and ourselves."
+          title="We craft beautiful coffee."
+          subtitle="We carefully plant, tenderly harvest and diligently roast our beans with a strong consistency."
           ctaGroup={[
             <Button color="primary" variant="contained" size="large">
-              Contact us
+              See our coffee
             </Button>,
           ]}
           fadeUp

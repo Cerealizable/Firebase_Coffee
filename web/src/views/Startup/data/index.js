@@ -4,20 +4,12 @@ export const partners = [
     logo: '/images/logos/airbnb.svg',
   },
   {
-    name: 'Coinbase',
-    logo: '/images/logos/coinbase.svg',
-  },
-  {
     name: 'Dribbble',
     logo: '/images/logos/dribbble.svg',
   },
   {
     name: 'Instagram',
     logo: '/images/logos/instagram.svg',
-  },
-  {
-    name: 'Netflix',
-    logo: '/images/logos/netflix.svg',
   },
   {
     name: 'Pinterest',
@@ -27,67 +19,67 @@ export const partners = [
 
 export const services = [
   {
-    icon: 'fas fa-laptop-code',
-    title: 'Web Design',
+    icon: 'fas fa-mobile-alt',
+    title: 'Robusta',
     description:
-      'We design and develop beautiful, lightning fast, scalable, and marketing-focused websites tailored to grow your business.',
+      'Robusta coffees have extremely high levels of caffeine, which makes the plant far more resilient than the Arabica species. Our very best Robusta coffee beans have hints of chocolate rum within their flavor profile.',
   },
   {
-    icon: 'fas fa-mobile-alt',
-    title: 'UI / UX Design',
+    icon: 'fas fa-laptop-code',
+    title: 'Arabica',
     description:
-      'We craft great user centered interfaces for web and mobile apps. We ensure to deliver intuitive and seamless experiences.',
+      'Farmed in areas with high elevations above sea level, particularly those where rain is plentiful. The plants themselves are fairly delicate, requiring a fair amount of pruning and constant attention to environmental factors but come with a softer, sweeter taste. ',
   },
   {
     icon: 'far fa-lightbulb',
-    title: 'Product Design',
+    title: 'Liberica',
     description:
-      'We help you to carefully improve your digital product to deliver a great user experience, grow its user base and increase retention.',
+      'Liberica coffee beans are a rare treat. They’re grown in very specific climates with production being far too scarce for farmers to scale their operations to truly satisfy a global marketplace. Even still, the beans are considered a pleasant surprise.',
   },
   {
     icon: 'fas fa-brain',
-    title: 'Branding',
+    title: 'Light',
     description:
-      'We transform businesses into brands through high quality brand identity design.',
+      'Light roasts provide the lightest, most delicate flavors and can often be more acidic. Because there is less of a roasted flavor, the original flavor of the bean is allowed to shine through.',
   },
   {
     icon: 'fas fa-rocket',
-    title: 'Optimization',
+    title: 'Medium',
     description:
-      'We help you optimize your website or mobile app to increase your conversion rates.',
+      'Medium-roasted beans will have a chocolate brown color, dry surface, and a full flavor. These beans will have less acidity than lightly roasted beans and a slightly sweet, toasty flavor.',
   },
   {
     icon: 'fas fa-cogs',
-    title: 'Automation',
+    title: 'Dark',
     description:
-      'We help your business gain leverage and efficiency through smart automation.',
+      ' Dark-roasted coffee is roasted until the sugars begin to caramelize and the oils begin to rise to the surface of the bean. The flavor of dark-roasted beans is strong, smoky, and sometimes spicy. ',
   },
 ];
 
 export const process = [
   {
     icon: 'fas fa-brain',
-    title: '1. Idea',
+    title: '1. Plant',
     description:
-      'We meet with your team to know more about your idea, project and goal. After that, our team sits to create an action plan and proposal for your project.',
+      'Depending on the variety, it will take approximately three to four years for our newly planted coffee trees to bear fruit throughout our nurtured ecosystem.',
   },
   {
     icon: 'fas fa-mobile-alt',
-    title: '2. Design',
+    title: '2. Harvest',
     description:
-      'We start by designing a mockup or prototype of your website/app, and present it to you. Once with the initial mockup, we start the revision process to perfect it.',
+      'We use a unique selective picking process for our beans allowing for only the highest quality flavor to get through our expert selection and testing process.',
   },
   {
     icon: 'fas fa-laptop-code',
-    title: '3. Development',
+    title: '3. Care',
     description:
-      'We develop your website using the best practices and standards, so you have a perfectly responsive, lightning fast, and super scalable website.',
+      'We care for our beans like no other! Storing them in our scientifically driven unique POATR container allowing for only the finest filtered air to touch our beans.',
   },
   {
     icon: 'fas fa-cogs',
-    title: '4. Launch & Maintenance',
+    title: '4. Deliver',
     description:
-      'When the project is ready, we help you to launch it and push it live. After that, we meet with your team to train them on how to edit, update and scale it.',
+      'We package and our coffee with the upmost care and ship with one-day overnight shipping. Arriving to you the very next day, for a great taste in the morning!',
   },
 ];
 
