@@ -20,7 +20,7 @@ const Contact = props => {
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <SectionHeader
-            title="Would you like to collaborate on a project?"
+            title="Would you like to collaborate?"
             subtitle="Get in touch beside and we will get back to you soon to connect about your project."
             align="left"
             disableGutter
