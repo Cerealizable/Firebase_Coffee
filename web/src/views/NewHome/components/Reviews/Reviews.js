@@ -24,8 +24,8 @@ const Reviews = props => {
       slidesPerView: 1,
       spaceBetween: 30,
       pagination: {
-        el: '.swiper-container .swiper-pagination',
-        type: 'bullets',
+        // el: '.swiper-container .swiper-pagination',
+        // type: 'bullets',
         clickable: true,
       },
       autoplay: {
