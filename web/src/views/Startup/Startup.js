@@ -8,16 +8,12 @@ import {
   Hero,
   Partners,
   Process,
-  // Reviews,
-  // Work,
 } from './components';
 
 import { 
   partners, 
   services, 
   process, 
-  // work, 
-  // reviews 
 } from './data';
 
 const useStyles = makeStyles(theme => ({
@@ -46,14 +42,6 @@ const Startup = () => {
         <Process data={process} />
       </Section>
       <Divider />
-      {/* <Section>
-        <Work data={work} />
-      </Section> */}
-      {/* <Divider />
-      <Section>
-        <Reviews data={reviews} />
-      </Section> */}
-      {/* <Divider /> */}
       <SectionAlternate className={classes.sectionAlternate}>
         <Contact />
       </SectionAlternate>
