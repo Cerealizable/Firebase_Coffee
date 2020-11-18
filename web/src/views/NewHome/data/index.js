@@ -52,37 +52,37 @@ export const partners = [
 
 export const services = [
   {
-    icon: 'far fa-leaf',
+    icon: 'fas fa-cogs',
     title: 'Robusta',
     description:
       'Robusta coffees have extremely high levels of caffeine, which makes the plant far more resilient than the Arabica species. Our very best Robusta coffee beans have hints of chocolate rum within their flavor profile.',
   },
   {
-    icon: 'fas fa-laptop-code',
+    icon: 'fas fa-adjust',
     title: 'Arabica',
     description:
       'Farmed in areas with high elevations above sea level, particularly those where rain is plentiful. The plants themselves are fairly delicate, requiring a fair amount of pruning and constant attention to environmental factors but come with a softer, sweeter taste. ',
   },
   {
-    icon: 'far fa-lightbulb',
+    icon: 'fab fa-angellist',
     title: 'Liberica',
     description:
       'Liberica coffee beans are a rare treat. They’re grown in very specific climates with production being far too scarce for farmers to scale their operations to truly satisfy a global marketplace. Even still, the beans are considered a pleasant surprise.',
   },
   {
-    icon: 'fas fa-brain',
+    icon: 'fas fa-feather-alt',
     title: 'Light',
     description:
       'Light roasts provide the lightest, most delicate flavors and can often be more acidic. Because there is less of a roasted flavor, the original flavor of the bean is allowed to shine through.',
   },
   {
-    icon: 'fas fa-rocket',
+    icon: 'fas fa-feather',
     title: 'Medium',
     description:
       'Medium-roasted beans will have a chocolate brown color, dry surface, and a full flavor. These beans will have less acidity than lightly roasted beans and a slightly sweet, toasty flavor.',
   },
   {
-    icon: 'fas fa-cogs',
+    icon: 'fas fa-moon',
     title: 'Dark',
     description:
       ' Dark-roasted coffee is roasted until the sugars begin to caramelize and the oils begin to rise to the surface of the bean. The flavor of dark-roasted beans is strong, smoky, and sometimes spicy. ',
@@ -113,27 +113,5 @@ export const process = [
     title: '4. Deliver',
     description:
       'We package and our coffee with the upmost care and ship with one-day overnight shipping. Arriving to you the very next day, for a great taste in the morning!',
-  },
-];
-
-export const work = [
-  {
-    title: 'Your Brand Platform',
-    description:
-      'Monetize your website and manage all guest interactions with your own brand, logo and domains.',
-    illustration: '/images/illustrations/brand-platform.svg',
-  },
-  {
-    title: 'Mobile Compatible Platform',
-    description:
-      'Introduce your brand-new mobile friendly website to your customers. Seamlessly integrates with WiFi hardware and marketing automation software.',
-    illustration: '/images/illustrations/mobiles.svg',
-  },
-  {
-    label: 'CLIENT PORTAL ACCESS',
-    title: 'Simple Customer Dashboards',
-    description:
-      'Give sub-users access to a simplified dashboard with limited permission levels to offer remote management and real-time analytics.',
-    illustration: '/images/illustrations/dashboard.svg',
   },
 ];

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -8,14 +8,11 @@ import {
   Hidden,
   List,
   ListItem,
-  ListItemIcon,
-  Popover,
   Typography,
   IconButton,
   Button,
   colors,
 } from '@material-ui/core';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { Image } from '../../../../components/atoms/index';
@@ -120,127 +117,6 @@ const Topbar = props => {
 
   const classes = useStyles();
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [openedPopoverId, setOpenedPopoverId] = useState(null);
-
-  const handleClick = (event, popoverId) => {
-    setAnchorEl(event.target);
-    setOpenedPopoverId(popoverId);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-    setOpenedPopoverId(null);
-  };
-
-  const landings = pages.landings;
-  const supportedPages = pages.pages;
-  const account = pages.account;
-
-  const MenuGroup = props => {
-    const { item } = props;
-    return (
-      <List disablePadding>
-        <ListItem disableGutters>
-          <Typography
-            variant="body2"
-            color="primary"
-            className={classes.menuGroupTitle}
-          >
-            {item.groupTitle}
-          </Typography>
-        </ListItem>
-        {item.pages.map((page, i) => (
-          <ListItem disableGutters key={i} className={classes.menuGroupItem}>
-            <Typography
-              variant="body1"
-              component={'a'}
-              href={page.href}
-              className={clsx(classes.navLink, 'submenu-item')}
-              color="textSecondary"
-              onClick={handleClose}
-            >
-              {page.title}
-            </Typography>
-          </ListItem>
-        ))}
-      </List>
-    );
-  };
-
-  const LandingPages = () => {
-    const { services, apps, web } = landings.children;
-    return (
-      <div className={classes.menu}>
-        <div className={classes.menuItem}>
-          <MenuGroup item={services} />
-          <MenuGroup item={apps} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={web} />
-        </div>
-      </div>
-    );
-  };
-
-  const SupportedPages = () => {
-    const {
-      career,
-      helpCenter,
-      company,
-      contact,
-      blog,
-      portfolio,
-    } = supportedPages.children;
-    return (
-      <div className={classes.menu}>
-        <div className={classes.menuItem}>
-          <MenuGroup item={career} />
-          <MenuGroup item={helpCenter} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={company} />
-          <MenuGroup item={contact} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={blog} />
-          <MenuGroup item={portfolio} />
-        </div>
-      </div>
-    );
-  };
-
-  const AccountPages = () => {
-    const { settings, signup, signin, password, error } = account.children;
-    return (
-      <div className={classes.menu}>
-        <div className={classes.menuItem}>
-          <MenuGroup item={settings} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={signup} />
-          <MenuGroup item={signin} />
-        </div>
-        <div className={classes.menuItem}>
-          <MenuGroup item={password} />
-          <MenuGroup item={error} />
-        </div>
-      </div>
-    );
-  };
-
-  const renderPages = id => {
-    if (id === 'landing-pages') {
-      return <LandingPages />;
-    }
-    if (id === 'supported-pages') {
-      return <SupportedPages />;
-    }
-    if (id === 'account') {
-      return <AccountPages />;
-    }
-  };
-
   return (
     <AppBar
       {...rest}
@@ -252,7 +128,7 @@ const Topbar = props => {
           <a href="/" title="thefront">
             <Image
               className={classes.logoImage}
-              src="/images/logos/logo.svg"
+              src="/images/logos/cerealLogo.png"
               alt="thefront"
               lazy={false}
             />
@@ -261,52 +137,6 @@ const Topbar = props => {
         <div className={classes.flexGrow} />
         <Hidden smDown>
           <List className={classes.navigationContainer}>
-            {[landings, supportedPages, account].map((page, i) => (
-              <div key={page.id}>
-                <ListItem
-                  aria-describedby={page.id}
-                  onClick={e => handleClick(e, page.id)}
-                  className={clsx(
-                    classes.listItem,
-                    openedPopoverId === page.id ? classes.listItemActive : '',
-                  )}
-                >
-                  <Typography
-                    variant="body1"
-                    color="textSecondary"
-                    className={clsx(classes.listItemText, 'menu-item')}
-                  >
-                    {page.title}
-                  </Typography>
-                  <ListItemIcon className={classes.listItemIcon}>
-                    <ExpandMoreIcon
-                      className={
-                        openedPopoverId === page.id ? classes.expandOpen : ''
-                      }
-                      fontSize="small"
-                    />
-                  </ListItemIcon>
-                </ListItem>
-                <Popover
-                  elevation={1}
-                  id={page.id}
-                  open={openedPopoverId === page.id}
-                  anchorEl={anchorEl}
-                  onClose={handleClose}
-                  anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'center',
-                  }}
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'center',
-                  }}
-                  classes={{ paper: classes.popover }}
-                >
-                  <div>{renderPages(page.id)}</div>
-                </Popover>
-              </div>
-            ))}
             <ListItem className={classes.listItem}>
               <Typography
                 variant="body1"
@@ -316,7 +146,31 @@ const Topbar = props => {
                 target="blank"
                 href="https://thefront-styleguide.maccarianagency.com/"
               >
-                Documentation
+                Sign in
+              </Typography>
+            </ListItem>
+            <ListItem className={classes.listItem}>
+              <Typography
+                variant="body1"
+                color="textSecondary"
+                className={classes.listItemText}
+                component="a"
+                target="blank"
+                href="https://thefront-styleguide.maccarianagency.com/"
+              >
+                Sign Up
+              </Typography>
+            </ListItem>
+            <ListItem className={classes.listItem}>
+              <Typography
+                variant="body1"
+                color="textSecondary"
+                className={classes.listItemText}
+                component="a"
+                target="blank"
+                href="https://thefront-styleguide.maccarianagency.com/"
+              >
+                Products
               </Typography>
             </ListItem>
             <ListItem className={classes.listItem}>
@@ -329,7 +183,7 @@ const Topbar = props => {
                 href="https://material-ui.com/store/items/the-front-landing-page/"
                 className={classes.listItemButton}
               >
-                Buy Now
+                Buy
               </Button>
             </ListItem>
           </List>
