@@ -179,16 +179,18 @@ const NewHome = () => {
         </div>
       </Parallax>
       <Section id="home-reviews">
-        <Reviews data={reviews} />
-        <IconAlternate
-            shape="circle"
-            fontIconClass="fas fa-chevron-down"
-            color={colors.amber}
-            size="small"
-            className={classes.scrollIcon}
-            onClick={() => scrollTo('home-contact')}
-            data-aos="fade-up"
-          />
+        <div className={clsx(classes.fullHeight)}>
+          <Reviews data={reviews} />
+          <IconAlternate
+              shape="circle"
+              fontIconClass="fas fa-chevron-down"
+              color={colors.amber}
+              size="small"
+              className={classes.scrollIcon}
+              onClick={() => scrollTo('home-contact')}
+              data-aos="fade-up"
+            />
+        </div>
       </Section>
       <Divider />
       <Section id="home-contact">
