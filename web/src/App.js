@@ -8,6 +8,9 @@ import Signup from './components/Signup';
 import theme from './theme';
 import Routes from './Routes';
 
+import 'swiper/swiper.scss';
+
+
 // allows for a user created history to be stored in props
 const browserHistory = createBrowserHistory();
 

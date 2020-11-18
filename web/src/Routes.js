@@ -12,7 +12,8 @@ import {
   NotFoundCover as NotFoundCoverView,
   SignupCover as SignupCoverView,
   SigninCover as SigninCoverView,
-  Startup as StartupView,
+  // Startup as StartupView,
+  NewHome as NewHomeView,
 } from './views';
 
 const Routes = () => {
@@ -32,7 +33,7 @@ const Routes = () => {
         path="/account/:pageId?"
       />
       <RouteWithLayout
-        component={StartupView}
+        component={NewHomeView}
         exact
         layout={MainLayout}
         path="/home"
