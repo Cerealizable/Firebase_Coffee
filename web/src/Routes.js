@@ -7,12 +7,11 @@ import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 import {
   Agency as AgencyView,
   Account as AccountView,
-  Ecommerce as EcommerceView,
+  CoffeeProducts as CoffeeProductsView,
   NotFound as NotFoundView,
   NotFoundCover as NotFoundCoverView,
   SignupCover as SignupCoverView,
   SigninCover as SigninCoverView,
-  // Startup as StartupView,
   NewHome as NewHomeView,
 } from './views';
 
@@ -63,7 +62,7 @@ const Routes = () => {
         path="/signup-cover"
       />
       <RouteWithLayout
-        component={EcommerceView}
+        component={CoffeeProductsView}
         exact
         layout={MainLayout}
         path="/products"
