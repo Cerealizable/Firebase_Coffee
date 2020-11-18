@@ -6,3 +6,4 @@ export { default as Contact } from './Contact';
 export { default as Features } from './Features';
 export { default as Partners } from './Partners';
 export { default as Robusta } from './Robusta';
+export { default as Liberica } from './Liberica';

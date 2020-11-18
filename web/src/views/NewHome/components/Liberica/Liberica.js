@@ -13,19 +13,23 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Arabica = props => {
+const Liberica = props => {
   const { className, ...rest } = props;
   const classes = useStyles();
 
   return (
     <div className={clsx(classes.root, className)} {...rest}>
       <SectionHeader
-        title={<span className={classes.textWhite}>Arabica</span>}
+        title={<span className={classes.textWhite}>LIBERICA</span>}
         titleVariant="h1"
-        subtitle={<span className={classes.textWhite}>The respectable flavor</span>}
+        subtitle={
+          <span className={classes.textWhite}>
+            Our special reserve
+          </span>
+        }
         ctaGroup={[
           <Button variant="outlined" color="secondary" size="large">
-            See Arabica products
+            See Liberica products
           </Button>,
         ]}
         disableGutter
@@ -35,11 +39,11 @@ const Arabica = props => {
   );
 };
 
-Arabica.propTypes = {
+Liberica.propTypes = {
   /**
    * External classes
    */
   className: PropTypes.string,
 };
 
-export default Arabica;
+export default Liberica;

@@ -12,7 +12,8 @@ import {
   Reviews,
   Contact,
   Partners,
-  Features
+  Features,
+  Liberica
 } from './components';
 
 import { 
@@ -56,13 +57,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#0000008a',
   },
   robustaSection: {
-    backgroundColor: '#003c0580',
+    backgroundColor: '#0000008a',
   },
   libericaSection: {
-    backgroundColor: '#2d402f80',
-  },
-  nikeSection: {
-    backgroundColor: '#5f3f3f80',
+    backgroundColor: '#0000008a',
   },
 }));
 
@@ -91,17 +89,17 @@ const NewHome = () => {
           color={colors.amber}
           size="small"
           className={classes.scrollIcon}
-          onClick={() => scrollTo('home-arabica')}
+          onClick={() => scrollTo('home-robusta')}
         />
       </div>
       <Partners data={partners} />
       <Parallax
-        backgroundImage="/images/photos/blog/cover1.jpg"
-        id="home-arabica"
+        backgroundImage="/images/photos/coffee/coffee-parallax-cup.jpg"
+        id="home-robusta"
       >
-        <div className={clsx(classes.fullHeight, classes.arabicaSection)}>
+        <div className={clsx(classes.fullHeight, classes.robustaSection)}>
           <Section>
-            <Arabica />
+            <Robusta />
           </Section>
           <IconAlternate
             shape="circle"
@@ -124,17 +122,17 @@ const NewHome = () => {
           color={colors.amber}
           size="small"
           className={classes.scrollIcon}
-          onClick={() => scrollTo('home-robusta')}
+          onClick={() => scrollTo('home-arabica')}
           data-aos="fade-up"
         />
       </div>
       <Parallax
-        backgroundImage="/images/photos/blog/cover2.jpg"
-        id="home-robusta"
+        backgroundImage="/images/photos/coffee/coffee-parallax-splash.jpg"
+        id="home-arabica"
       >
-        <div className={clsx(classes.fullHeight, classes.robustaSection)}>
+        <div className={clsx(classes.fullHeight, classes.arabicaSection)}>
           <Section>
-            <Robusta />
+            <Arabica />
           </Section>
           <IconAlternate
             shape="circle"
@@ -157,15 +155,43 @@ const NewHome = () => {
           color={colors.amber}
           size="small"
           className={classes.scrollIcon}
-          onClick={() => scrollTo('home-reviews')}
+          onClick={() => scrollTo('home-liberica')}
           data-aos="fade-up"
         />
       </div>
+      <Parallax
+        backgroundImage="/images/photos/coffee/coffee-parallax-pour.jpg"
+        id="home-liberica"
+      >
+        <div className={clsx(classes.fullHeight, classes.robustaSection)}>
+          <Section>
+            <Liberica />
+          </Section>
+          <IconAlternate
+            shape="circle"
+            fontIconClass="fas fa-chevron-down"
+            color={colors.amber}
+            size="small"
+            className={classes.scrollIcon}
+            onClick={() => scrollTo('home-reviews')}
+            data-aos="fade-up"
+          />
+        </div>
+      </Parallax>
       <Section id="home-reviews">
         <Reviews data={reviews} />
+        <IconAlternate
+            shape="circle"
+            fontIconClass="fas fa-chevron-down"
+            color={colors.amber}
+            size="small"
+            className={classes.scrollIcon}
+            onClick={() => scrollTo('home-contact')}
+            data-aos="fade-up"
+          />
       </Section>
       <Divider />
-      <Section>
+      <Section id="home-contact">
         <Contact />
       </Section>
       <IconAlternate
@@ -174,7 +200,7 @@ const NewHome = () => {
         color={colors.amber}
         size="small"
         className={clsx(classes.scrollIcon, classes.scrollTopIcon)}
-        onClick={() => scrollTo('home-arabica')}
+        onClick={() => scrollTo('home-robusta')}
         data-aos="fade-up"
       />
       <Divider />

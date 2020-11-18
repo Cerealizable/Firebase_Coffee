@@ -24,7 +24,7 @@ const Robusta = props => {
         titleVariant="h1"
         subtitle={
           <span className={classes.textWhite}>
-            For a more robust feeling
+            The Robust start
           </span>
         }
         ctaGroup={[
