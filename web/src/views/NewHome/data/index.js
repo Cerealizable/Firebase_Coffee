@@ -52,7 +52,7 @@ export const partners = [
 
 export const services = [
   {
-    icon: 'fas fa-mobile-alt',
+    icon: 'far fa-leaf',
     title: 'Robusta',
     description:
       'Robusta coffees have extremely high levels of caffeine, which makes the plant far more resilient than the Arabica species. Our very best Robusta coffee beans have hints of chocolate rum within their flavor profile.',
@@ -91,25 +91,25 @@ export const services = [
 
 export const process = [
   {
-    icon: 'fas fa-brain',
+    icon: 'fas fa-seedling',
     title: '1. Plant',
     description:
       'Depending on the variety, it will take approximately three to four years for our newly planted coffee trees to bear fruit throughout our nurtured ecosystem.',
   },
   {
-    icon: 'fas fa-mobile-alt',
+    icon: 'fas fa-leaf',
     title: '2. Harvest',
     description:
       'We use a unique selective picking process for our beans allowing for only the highest quality flavor to get through our expert selection and testing process.',
   },
   {
-    icon: 'fas fa-laptop-code',
+    icon: 'fas fa-hand-holding-medical',
     title: '3. Care',
     description:
       'We care for our beans like no other! Storing them in our scientifically driven unique POATR container allowing for only the finest filtered air to touch our beans.',
   },
   {
-    icon: 'fas fa-cogs',
+    icon: 'fas fa-truck',
     title: '4. Deliver',
     description:
       'We package and our coffee with the upmost care and ship with one-day overnight shipping. Arriving to you the very next day, for a great taste in the morning!',

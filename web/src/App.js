@@ -4,7 +4,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import { createBrowserHistory } from 'history';
 import Login from './components/Login';
 import Signup from './components/Signup';
-// import Swiper from 'swiper';
 
 import theme from './theme';
 import Routes from './Routes';
