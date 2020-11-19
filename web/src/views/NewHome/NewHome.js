@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import { useHistory } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import { colors, Divider } from '@material-ui/core';
 import { IconAlternate } from 'components/molecules';
@@ -9,7 +10,7 @@ import {
   Arabica,
   Process,
   Robusta,
-  Reviews,
+  // Reviews,
   Contact,
   Partners,
   Features,
@@ -17,7 +18,7 @@ import {
 } from './components';
 
 import { 
-  reviews,
+  // reviews,
   partners,
   services, 
   process, 
@@ -25,6 +26,7 @@ import {
 } from './data';
 
 const useStyles = makeStyles(theme => ({
+ 
   root: {
     height: '100%',
     width: '100%',
@@ -65,6 +67,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const NewHome = () => {
+  const history = useHistory()
   const classes = useStyles();
 
   const scrollTo = id => {
@@ -77,11 +80,16 @@ const NewHome = () => {
       window.scrollTo({ left: 0, top: element.offsetTop, behavior: 'smooth' });
     });
   };
+
+  const gotoProducts = () => {
+    history.push("/products");
+  }
+
   return (
     <div className={classes.root}>
       <div className={classes.fullHeight}>
         <Section className={classes.disablePaddingTop}>
-          <Welcome />
+          <Welcome gotoProducts={gotoProducts}/>
         </Section>
         <IconAlternate
           shape="circle"
@@ -173,12 +181,12 @@ const NewHome = () => {
             color={colors.amber}
             size="small"
             className={classes.scrollIcon}
-            onClick={() => scrollTo('home-reviews')}
+            onClick={() => scrollTo('home-contact')}
             data-aos="fade-up"
           />
         </div>
       </Parallax>
-      <Section id="home-reviews">
+      {/* <Section id="home-reviews">
         <div className={clsx(classes.fullHeight)}>
           <Reviews data={reviews} />
           <IconAlternate
@@ -191,7 +199,7 @@ const NewHome = () => {
               data-aos="fade-up"
             />
         </div>
-      </Section>
+      </Section> */}
       <Divider />
       <Section id="home-contact">
         <Contact />

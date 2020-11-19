@@ -1,6 +1,7 @@
 import React  from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
 
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -104,9 +105,26 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Topbar = props => {
+  const history = useHistory();
   const { className, onSidebarOpen, pages, ...rest } = props;
 
   const classes = useStyles();
+
+  const gotoSignIn = () => {
+    history.push("/signin-cover");
+  }
+
+  const gotoSignUp = () => {
+    history.push("/signup-cover");
+  }
+
+  const gotoProducts = () => {
+    history.push("/products");
+  }
+
+  const gotoAccount = () => {
+    history.push("/account/general");
+  }
 
   return (
     <AppBar
@@ -128,13 +146,26 @@ const Topbar = props => {
         <div className={classes.flexGrow} />
         <Hidden smDown>
           <List className={classes.navigationContainer}>
-            <ListItem className={classes.listItem}>
+            <ListItem 
+              className={classes.listItem}
+            >
               <Typography
                 variant="body1"
                 color="textSecondary"
                 className={classes.navLinkText}
-                component="a"
-                target="blank"
+                onClick={gotoAccount}
+              >
+                Account
+              </Typography>
+            </ListItem>
+            <ListItem 
+              className={classes.listItem}
+            >
+              <Typography
+                variant="body1"
+                color="textSecondary"
+                className={classes.navLinkText}
+                onClick={gotoSignIn}
               >
                 Sign in
               </Typography>
@@ -144,10 +175,9 @@ const Topbar = props => {
                 variant="body1"
                 color="textSecondary"
                 className={classes.navLinkText}
-                component="a"
-                target="blank"
+                onClick={gotoSignUp}
               >
-                Sign Up
+                Sign up
               </Typography>
             </ListItem>
             <ListItem className={classes.navLink}>
@@ -155,8 +185,7 @@ const Topbar = props => {
                 variant="body1"
                 color="textSecondary"
                 className={classes.navLinkText}
-                component="a"
-                target="blank"
+                onClick={gotoProducts}
               >
                 Products
               </Typography>
