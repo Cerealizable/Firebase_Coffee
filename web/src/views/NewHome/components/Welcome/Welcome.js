@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Welcome = props => {
-  const { className, ...rest } = props;
+  const { className, gotoProducts, ...rest } = props;
   const classes = useStyles();
 
   return (
@@ -20,7 +20,7 @@ const Welcome = props => {
         titleVariant="h2"
         subtitle="We carefully plant, tenderly harvest and diligently roast our beans with a strong consistency in quality."
         ctaGroup={[
-          <Button variant="contained" color="primary" size="large">
+          <Button variant="contained" color="primary" size="large" onClick={gotoProducts}>
             See Coffee
           </Button>,
         ]}
