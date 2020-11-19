@@ -1,7 +1,9 @@
-import React from 'react';
+import React  from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
+import MenuIcon from '@material-ui/icons/Menu';
 import {
   AppBar,
   Toolbar,
@@ -10,12 +12,18 @@ import {
   ListItem,
   Typography,
   IconButton,
-  Button,
   colors,
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
 
-import { Image } from '../../../../components/atoms/index';
+import {
+  ShoppingCart,
+} from './components';
+
+import { cartItems } from './data';
+
+import { Image } from 'components/atoms/index';
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,27 +51,10 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette.primary.dark,
     },
   },
-  listItem: {
-    cursor: 'pointer',
-    '&:hover > .menu-item, &:hover svg': {
-      color: theme.palette.primary.dark,
-    },
-  },
-  listItemActive: {
-    '&> .menu-item': {
-      color: theme.palette.primary.dark,
-    },
-  },
-  listItemText: {
+  navLinkText: {
     flex: '0 0 auto',
     marginRight: theme.spacing(2),
     whiteSpace: 'nowrap',
-  },
-  listItemButton: {
-    whiteSpace: 'nowrap',
-  },
-  listItemIcon: {
-    minWidth: 'auto',
   },
   popover: {
     padding: theme.spacing(4),
@@ -141,10 +132,9 @@ const Topbar = props => {
               <Typography
                 variant="body1"
                 color="textSecondary"
-                className={classes.listItemText}
+                className={classes.navLinkText}
                 component="a"
                 target="blank"
-                href="https://thefront-styleguide.maccarianagency.com/"
               >
                 Sign in
               </Typography>
@@ -153,38 +143,26 @@ const Topbar = props => {
               <Typography
                 variant="body1"
                 color="textSecondary"
-                className={classes.listItemText}
+                className={classes.navLinkText}
                 component="a"
                 target="blank"
-                href="https://thefront-styleguide.maccarianagency.com/"
               >
                 Sign Up
               </Typography>
             </ListItem>
-            <ListItem className={classes.listItem}>
+            <ListItem className={classes.navLink}>
               <Typography
                 variant="body1"
                 color="textSecondary"
-                className={classes.listItemText}
+                className={classes.navLinkText}
                 component="a"
                 target="blank"
-                href="https://thefront-styleguide.maccarianagency.com/"
               >
                 Products
               </Typography>
             </ListItem>
             <ListItem className={classes.listItem}>
-              <Button
-                size="large"
-                variant="contained"
-                color="primary"
-                component="a"
-                target="blank"
-                href="https://material-ui.com/store/items/the-front-landing-page/"
-                className={classes.listItemButton}
-              >
-                Buy
-              </Button>
+              <ShoppingCart data={cartItems} />
             </ListItem>
           </List>
         </Hidden>
