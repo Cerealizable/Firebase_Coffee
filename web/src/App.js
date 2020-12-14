@@ -1,9 +1,11 @@
 import './App.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { createBrowserHistory } from 'history';
-import Login from './components/Login';
-import Signup from './components/Signup';
+
+import ProductsContextProvider from './contexts/ProductsContext';
+import CartContextProvider from './contexts/CartContext';
+
 
 import theme from './theme';
 import Routes from './Routes';
@@ -17,11 +19,13 @@ const browserHistory = createBrowserHistory();
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Router history={browserHistory}>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/signup" component={Signup}/>
-        <Routes />
-      </Router>
+      <ProductsContextProvider>
+        <CartContextProvider>
+          <Router history={browserHistory}>
+            <Routes />
+          </Router>
+        </CartContextProvider>
+      </ProductsContextProvider>
   </ThemeProvider>
   );
 }
