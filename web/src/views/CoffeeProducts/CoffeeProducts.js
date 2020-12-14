@@ -10,12 +10,13 @@ import {
   Categories,
   Hero,
   Overview,
-  Products,
+  // Products,
+  ProductsGrid,
 } from './components';
 
 import {
   categories,
-  featuredProducts,
+  // featuredProducts,
 } from './data';
 
 const useStyles = makeStyles(theme => ({
@@ -29,7 +30,7 @@ const useStyles = makeStyles(theme => ({
       paddingTop: theme.spacing(5),
     },
   },
-  sectionNoPaddingTop: {
+  sectionNoPadding: {
     paddingTop: 0,
   },
   sectionFeaturedProducts: {
@@ -65,7 +66,7 @@ const CoffeeProducts = () => {
       <Section className={classes.pagePaddingTop}>
         <Hero />
       </Section>
-      <Section className={classes.sectionNoPaddingTop}>
+      <Section className={classes.sectionNoPadding}>
         <Categories data={categories} />
         <div className={clsx(classes.alignCenter)}>
         <IconAlternate
@@ -79,10 +80,10 @@ const CoffeeProducts = () => {
           />
       </div>
       </Section>
-      <Section>
-        <Products id='coffee-products-featured-products' data={featuredProducts} />
+      <Section className={classes.sectionNoPadding}>
+        <ProductsGrid />
       </Section>
-      <Section className={classes.sectionNoPaddingTop}>
+      <Section >
         <Overview />
       </Section>
     </div>

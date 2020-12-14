@@ -1,17 +1,13 @@
 import React from 'react';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Drawer,
   Button,
-  Divider,
-  List,
+  // Divider,
   ListItem,
 } from '@material-ui/core';
-
-import ListItemText from '@material-ui/core/ListItemText';
-
-import CountUpNumber from 'components/molecules/CountUpNumber';
+import Cart from '../Cart'
 
 
 const useStyles = makeStyles({
@@ -27,16 +23,16 @@ const useStyles = makeStyles({
 });
 
 const ShoppingCart = props => {
-  const {data} = props;
+  // const {data} = props;
 
   const classes = useStyles();
   const [state, setState] = React.useState({
     right: false,
   });
 
-  let sum = data.reduce((total, item) => {
-    return total + (item.price * item.quantity);
-  }, 0);
+  // let sum = data.reduce((total, item) => {
+  //   return total + (item.price * item.quantity);
+  // }, 0);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -48,28 +44,15 @@ const ShoppingCart = props => {
 
   const list = (anchor) => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {data.map((item, index) => (
-          <ListItem button key={item.title}>
-            <ListItemText primary={item.title} />
-            <ListItemText primary={item.quantity} />
-            $<ListItemText primary={item.price} /> /lb
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <ListItem className={classes.listItem}>
-          <CountUpNumber end={sum} prefix="$" label="Total" />
+      <ListItem>
+        <Cart />
       </ListItem>
-      <Divider />
-      <ListItem className={classes.listItem}>
+      {/* <Divider /> */}
+      {/* <ListItem className={classes.listItem}>
         <Button
           size="large"
           variant="contained"
@@ -80,7 +63,7 @@ const ShoppingCart = props => {
         >
           Purchase
         </Button>
-      </ListItem>
+      </ListItem> */}
     </div>
   );
 

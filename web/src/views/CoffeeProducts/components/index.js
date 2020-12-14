@@ -9,3 +9,5 @@ export { default as Products } from './Products';
 export { default as QuickSearch } from './QuickSearch';
 export { default as Reviews } from './Reviews';
 export { default as Sales } from './Sales';
+export { default as ProductsGrid } from './ProductsGrid';
+export { default as ProductItem } from './ProductItem';

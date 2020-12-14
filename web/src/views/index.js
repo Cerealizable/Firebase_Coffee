@@ -1,4 +1,3 @@
-export { default as Agency } from './Agency';
 export { default as Account } from './Account';
 export { default as CoffeeProducts } from './CoffeeProducts';
 export { default as NewHome } from './NewHome';
@@ -6,4 +5,5 @@ export { default as NotFound } from './NotFound';
 export { default as NotFoundCover } from './NotFoundCover';
 export { default as SigninCover } from './SigninCover';
 export { default as SignupCover } from './SignupCover';
-export { default as Startup } from './Startup';
+export { default as Cart } from './Cart';
+export { default as Store } from './store';
